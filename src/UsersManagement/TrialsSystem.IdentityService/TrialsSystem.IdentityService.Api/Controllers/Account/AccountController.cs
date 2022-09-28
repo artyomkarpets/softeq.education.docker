@@ -206,7 +206,7 @@ namespace TrialsSystem.IdentityService.Api.Controllers
                 {
 
 
-                    ModelState.AddModelError("Identity", result.Errors.ToString());
+                    ModelState.AddModelError("Identity", string.Join("\n", result.Errors.Select(x => x.Description).ToList()));
                 }
 
             }

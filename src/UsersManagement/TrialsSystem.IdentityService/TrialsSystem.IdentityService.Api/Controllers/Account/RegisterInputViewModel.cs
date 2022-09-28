@@ -14,7 +14,7 @@ namespace TrialsSystem.IdentityService.Api.Controllers
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Compare("Password", ErrorMessage = "portal.comparePasswords")]
+        [Compare("Password", ErrorMessage = "Passwords do not match")]
         public string ConfirmPassword { get; set; }
 
 
